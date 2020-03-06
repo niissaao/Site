@@ -1,0 +1,42 @@
+<% if(locals.user)
+{ %>
+		<p class="salut">Salut, <%= user.username %></p>
+<% }%>
+<nav class="wrapper">
+	<ul class="menu">
+		<li>
+			<a href="/index">Prima pagină</a>
+		</li>
+		<li>
+			<a>Filme</a>
+			<ul class="submenu">
+				<li>
+					<a href="/filme_vizionate">Filme vizionate</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a>Seriale</a>
+			<ul class="submenu">
+				<li>
+					<a href="/seriale_vizionate">Seriale vizionate</a>
+				</li>
+				<li>
+					<a href="/seriale_in_curs">Seriale în curs de vizionare</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="/arhiva">Arhivă</a>
+		</li>
+		<% if(locals.user){ %>
+            <li>
+				<a href="/deconectare">Deconectare</a>
+			</li>
+		<% } else {%>
+			<li>
+				<a href="/inregistrare">Înregistrare</a>
+			</li>
+		<% } %>
+	</ul>
+</nav>

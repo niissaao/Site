@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Filme vizionate</title>
+		<meta charset="utf-8"/>
+		<meta name="keywords" content="filme, recenzie">
+		<meta name="author" content="Banea Sonia-Gabriela">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="https://i.imgur.com/zL0ROZO.png"/>
+		<link rel="stylesheet" type="text/css" href="/resurse/css/stil.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+			<%- include("../fragmente/header.ejs"); %>
+		</header>
+		<main>
+			<section>
+				<h1>Filme vizionate</h1>
+				<p class="subtitlu">Mai jos vei găsi o listă cu toate filmele pe care le-am vizionat și despre care am ceva de spus. Pentru fiecare am scris câte o mică recenzie.</p>
+				<img class='imagine' src='/resurse/imagini/cinema.jpg' alt="imagine filme" title="Filme vizionate">
+				<ul>
+					<li><a href="/we_need_to_talk_about_kevin" class="links">We Need to Talk About Kevin</a></li>
+					<li>Joker</li>
+					<li>Frozen</li>
+				</ul>
+			</section>
+			<article>
+				<h2>Social Media</h2>
+					<a href="https://www.facebook.com/baneasoniagabriela" class="fa fa-facebook"></a>
+					<a href="https://www.instagram.com/niissaao/?hl=ro" class="fa fa-instagram"></a>
+			</article>
+		</main>
+		<footer>
+			<%- include("../fragmente/footer.ejs"); %>
+		</footer>
+	</body>
+</html>

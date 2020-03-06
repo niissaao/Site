@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Înregistrare</title>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Pagina de înregistrare.">
+		<meta name="keywords" content="username, parolă">
+		<meta name="author" content="Banea Sonia-Gabriela">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/resurse/imagini/icon.png"/>
+		<link rel="stylesheet" type="text/css" href="/resurse/css/stil.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+			<%- include("../fragmente/header.ejs"); %>
+		</header>
+		<main>
+			<h1>Înregistrare utilizator: </h1>
+			<p>Completați următorul formular: </p>
+			<% if(!locals.rsstatus) <!-- verific daca status e definit-->
+			{ %>
+				<div class="inregistrare"><form method="post" class="date">
+					<p><label>Username: <input type="text" name="username" value="Introdu aici un username nefolosit." size="40"></label></p>
+					<p><label>Nume: <input type="text" name="nume" value="Introdu aici numele tău."></label></p>
+					<p><label>Parola: <input type="password" name="parola" value=""></label></p>
+					<p><label>Reintroduceți parola: <input type="password" name="rparola" value=""></label></p>
+					<p><label>Email: <input type="text" name="email" value="Introdu aici adresa ta e email."  size="50"></label></p>
+					<p><input type="submit" value="Submit"></p>
+				</form></div>
+			<% } else if(rsstatus=="ok")
+			{ %>
+				<p>Date introduse</p>
+			<% } else {%>
+				<p>Eroare</p>
+			<% } %>
+			<article>
+				<h2>Social Media</h2>
+					<a href="https://www.facebook.com/baneasoniagabriela" class="fa fa-facebook"></a>
+					<a href="https://www.instagram.com/niissaao/?hl=ro" class="fa fa-instagram"></a>
+			</article>
+			<div><br></div>
+			<div class="top"> <a href="#top">Top</a></div>
+		</main>
+		<footer>
+			<%- include("../fragmente/footer.ejs"); %>
+		</footer>
+	</body>
+</html>

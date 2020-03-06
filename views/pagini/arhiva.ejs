@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Arhivă</title>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Arhiva site-ului.">
+		<meta name="keywords" content="seriale, filme, sortare">
+		<meta name="author" content="Banea Sonia-Gabriela">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/resurse/imagini/icon.png"/>
+		<link rel="stylesheet" type="text/css" href="/resurse/css/stil.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="resurse/javascript/sortare.js"></script>
+	</head>
+	<body>
+		<header>
+			<%- include("../fragmente/header.ejs"); %>
+		</header>
+		<main>
+		</br></br></br>
+			<div>
+				<button id="startCount">Cronometrează câte secunde îți ia să găsești filmul potrivit pentru weekend-ul acesta!</button>
+				<p id="txt"></p>
+				<button id="stopCount">L-am găsit!</button>
+				<div id="containerinp"></div>
+				<select id="sel">
+					<% var tari = []; %>
+					<option value="Alege"> Alege </option>
+					<% for(var i = 0; i < film.length; i++)
+					{ %>
+						<% var ok = true; %>
+						<% for(var j = 0; j < tari.length; j++) 
+						{%>
+							<% if(tari[j] == film[i].tara) 
+							{%>
+								<% ok = false;%>
+							<% } %>
+						<% } %>
+						<% if(ok == true) 
+						{%>
+							<option value="<%= film[i].tara %>"> <%= film[i].tara %> </option>
+							<% tari[tari.length] = film[i].tara; %>
+					 <% } %>
+				 <% } %>
+				</select> </br>
+				<button type="buton" id="filtreaza">Filtrează</button>
+				<button type="buton" id="sorteaza_data">Sortează după dată</button>
+				<button type="buton" id="sorteaza_durata">Sortează după durată</button>
+				<button type="buton" id="sorteaza_nota">Sortează după notă</button>
+				<button type="buton" id="calculeaza">Calculează cât timp ți-ar lua să vizionezi tot.</button>
+				<input type="text" id="calcul"></input>
+			</div>
+			<br><br>
+			<button onclick="dezvaluie()">Dezvăluie</button>
+			<p class="numarfilme">Inițial pe pagină au fost </p> <p class="numarfilme" id="nrfilme"></p> <p class="numarfilme"> (de) filme.</p>
+			<div id="toatefilmele">
+			<% for(var i = 0; i < film.length; i++)
+				{ %>
+					<%- include('../fragmente/template_film', {film: film[i]}); %>
+				<% } %>
+			</div>
+			<article>
+				<h3>Social Media</h3>
+					<a href="https://www.facebook.com/baneasoniagabriela" class="fa fa-facebook"></a>
+					<a href="https://www.instagram.com/niissaao/?hl=ro" class="fa fa-instagram"></a>
+			</article>
+			<div><br></div>
+			<p>Ora curentă: </p>
+			<p id="ora"></p>
+			<button id="stop_ora">Îngheață ora aici!</button> </br></br>
+			<div class="top"> <a href="#top">Top</a></div>
+		</main>
+		<footer>
+			<%- include("../fragmente/footer.ejs"); %>
+		</footer>
+	</body>
+</html>

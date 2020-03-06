@@ -1,0 +1,203 @@
+body
+{
+	color: #660033;
+	background-color: #ffccdc;
+	background-attachment: fixed;
+	font-family: "Courier New";
+	padding-left: 5%;
+	padding-right: 5%;
+}
+main
+{
+	padding-top: 5%;
+}
+nav
+{
+	width: 100%;
+	position: fixed;
+}
+.links
+{
+	text-decoration: none;
+}
+.top
+{
+	text-decoration: none;
+	background-color: #c6538c;
+	width: 5%;
+}
+.footer
+{
+	font-style: italic;
+	background-color: #c6538c;
+	font-size: 0.75rem;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+.fa
+{
+	padding: 1.5%;
+	font-size: 1.5%;
+	width: 1.5%;
+	text-align: center;
+	text-decoration: none;
+}
+.fa:hover
+{
+	opacity: 0.7;
+}
+.fa-facebook
+{
+	background: #3B5998;
+	color: white;
+}
+.fa-instagram
+{
+	background: #125688;
+	color: white;
+}
+ul.menu>li, ul.menu>li>ul.submenu>li
+{
+	display:block;
+	font-size:70%;
+	font-weight:bold;
+	height:2rem;
+	text-align:center;
+	line-height:2rem;
+	list-style-type:none;
+	overflow:hidden;
+}
+ul.menu>li
+{
+	float: left;
+	width: 22%;
+}
+ul.submenu>li
+{
+	width:100%;
+}
+ul.menu>li>a,ul.submenu>li>a
+{
+	display:block;
+	height:	100%;
+	text-decoration:none;
+	color:black;
+}
+ul.menu>li:nth-of-type(even) a
+{
+	background: #993366;
+}
+ul.menu>li:nth-of-type(odd) a
+{
+	background: #c6538c;
+}
+ul.menu>li>ul.submenu
+{
+	position:relative;
+	top:0px;
+}
+ul.menu>li>ul.submenu>li
+{
+	border-top:1px solid black;
+}
+ul.menu>li>ul.submenu>li:last-child
+{
+	border-bottom:1px solid black;
+}
+ul.menu>li:hover
+{
+	overflow:visible;
+}
+ul.menu>li>a:hover, ul.submenu>li>a:hover
+{
+	background: #cc0066;
+}
+table
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th 
+{
+  border: 3px solid #872c58;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd)
+{
+  background-color: #e6b3cc;
+}
+
+div.inregistrare
+{
+	background-color: #e6b3cc;
+	width: 500px;
+	border: 3px solid #872c58;
+}
+
+div.coloane
+{
+	float: left;
+}
+
+div#container
+{
+	display:flex;
+}
+
+img#imgfilm
+{
+	min-height: 223px;
+	max-height: 223px;
+}
+
+article.template_film
+{
+	background-color:  #df9fbf;
+}
+
+.numarfilme
+{
+	font-size: 150%;
+}
+
+#logout
+{
+	background-color:  #df9fbf;
+	height: 50px;
+	width: 150px;
+	position: absolute;
+}
+
+@media only screen and (max-width: 600px)
+{
+	*
+	{
+		margin: 0;
+		padding: 0;
+	}
+	body
+	{
+		background-image: url('https://i.imgur.com/0imhUvd.png?1');
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	.imagine
+	{
+		width: 100%;
+	}
+	ul.menu>li, ul.menu>li>ul.submenu>li
+	{
+		font-size:50%;
+	}
+}
+@media only screen and (min-width: 600px)
+{
+	body
+	{
+		background-image: url('https://i.imgur.com/QjroYjt.png');
+	}
+}

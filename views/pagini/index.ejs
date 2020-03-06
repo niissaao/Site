@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Prima pagină</title>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Pagina principală a site-ului cu recenzii pentru filme și seriale.">
+		<meta name="keywords" content="seriale, filme, recenzie, părerea">
+		<meta name="author" content="Banea Sonia-Gabriela">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/resurse/imagini/icon.png"/>
+		<link rel="stylesheet" type="text/css" href="/resurse/css/stil.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+			<% if(!locals.user)
+			{%>
+				<form id="login" method="post" >
+					<label>	Username: <input type="text" name="username" value=""></label>
+					<label>	Parola: <input type="password" name="parola" value=""></label>
+					<input type="submit" value="Submit">
+				</form>
+			<% } %>
+			<%- include("../fragmente/header.ejs"); %>
+		</header>
+		<main>
+			<h1 id="top">Părerea mea despre ce am vizionat</h1>
+			<p class="subtitlu">Bine ai venit pe această pagină! Aici îmi voi exprima părerea despre filmele și serialele pe care le-am vizionat. Mai jos poți verifica ultimele titluri cărora le-am făcut o recenzie.</p>
+			<section>
+				<h2>Filme vizionate</h2>
+				<img class='imagine' src='/resurse/imagini/cinema.jpg' alt="imagine filme" title="Filme vizionate">
+				<ul>
+					<li><a href="/we_need_to_talk_about_kevin" class="links">We Need to Talk About Kevin</a></li>
+					<li>Joker</li>
+					<li>Frozen</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Seriale</h2>
+				<img class='imagine' src='/resurse/imagini/popcorn.jpg' alt="imagine seriale" title="Seriale vizionate">
+				<section>
+					<h3>Vizionate</h3>
+					<ul>
+						<li>The Originals</li>
+						<li>Game of Thrones</li>
+						<li>Stranger Things</li>
+					</ul>
+					<h3>În curs de vizionare</h3>
+					<ul>
+						<li>Supernatural</li>
+						<li>Vikings</li>
+						<li>Riverdale</li>
+					</ul>
+				</section>
+			</section>
+			<article>
+				<h2>Social Media</h2>
+					<a href="https://www.facebook.com/baneasoniagabriela" class="fa fa-facebook"></a>
+					<a href="https://www.instagram.com/niissaao/?hl=ro" class="fa fa-instagram"></a>
+			</article>
+			<div><br></div>
+			<div class="top"> <a href="#top">Top</a></div>
+		</main>
+		<footer>
+			<%- include("../fragmente/footer.ejs"); %>
+		</footer>
+	</body>
+</html>

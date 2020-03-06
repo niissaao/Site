@@ -1,0 +1,41 @@
+<article class="template_film <%= film.tara %> <%= film.durata %> <%= film.data %> <%= film.nota %>" id="art<%= film.id %>">
+	<section class="film" id="artt<%= film.id %>" onmouseover="schimbBg('artt<%= film.id %>')" onmouseout="reBg('artt<%= film.id %>')">
+		<div>
+			<h2>Film: <%= film.nume %></h2>
+			<button class="sterge", id="art<%= film.id %>x" ondblclick="del('art<%= film.id %>x')">Șterge</button>
+			<p class="tara"><b>Țara:</b> <%= film.tara %></p>
+			<p id="descriere"><b>Descriere:</b> <%= film.descriere %></p>
+		</div>
+		<div id="container">
+			<div class="coloane">
+				<img id="imgfilm" src="/resurse/imagini/<%= film.imagine %>" alt="[<%= film.nume %> nu are imagine]" />
+			</div>
+			<div class="coloane"><table>
+				<tr>
+					<th>Durata</th>
+					<td class="duratael"><%= film.durata %></td>
+				</tr>
+				<tr>
+					<th>Data lansării</th>
+					<td><%= film.data_lansarii %></td>
+				</tr>
+				<tr>
+					<th>Color sau nu</th>
+					<td class="colorx"><%= film.color %></td>
+				</tr>
+				<tr>
+					<th>Actori</th>
+					<td><%= film.actori %></td>
+				</tr>
+				<tr>
+					<th>Categorii</th>
+					<td><%= film.categorie %></td>
+				</tr>
+				<tr>
+					<th>Nota IMDb</th>
+					<td class="notax"><%= film.nota_IMDb %></td>
+				</tr>
+			</table></div>
+		</div>
+	</section>
+</article>
